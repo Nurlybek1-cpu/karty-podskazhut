@@ -49,9 +49,9 @@ button {
 }
 
 .header__title {
-  font-size: clamp(3.75rem, 2.5rem + 6.1728vw, 7.5rem);
+  font-size: clamp(60px, calc((100vw - 360px) / 18 + 60px), 120px);
   margin-bottom: 40px;
-  padding-top: 10%;
+  padding-top: 10vh;
 }
 
 .header__menu {
@@ -123,12 +123,16 @@ button {
 }
 
 .content-section {
-  padding: 20px 5vi;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: clamp(9.36px, 2.6vw, 37.44px);
+  padding-right: clamp(9.36px, 2.6vw, 37.44px);
 }
 
 .content__title {
-  font-size: clamp(24px, 2.083vw, 30px);
-  margin: 7% 0 2.5%;
+  font-size: 30px;
+  margin-top: 6.7vw;
+  margin-bottom: 2.522vw;
 }
 
 .content__text-block {
@@ -138,8 +142,8 @@ button {
 
 .content__paragraph {
   max-width: 1327px;
-  padding: 0.25em 0 0 2em;
-  line-height: 112%;
+  padding: 0.1em 0 0 1.9em;
+  line-height: 115%;
 }
 
 .content__text-block_type_first-lettered
@@ -158,8 +162,8 @@ button {
 
 .content__figure {
   position: relative;
-  width: calc(100% + 5.2vi);
-  left: -2.7vi;
+  width: calc(100% + 5.2vw);
+  left: -2.7vw;
   height: auto;
   margin: 7% 0 6.5%;
 }
@@ -170,7 +174,7 @@ button {
 }
 
 .content__picture-caption {
-  padding: clamp(19.5px, calc(19.5px + 0.5 * (100vw - 360px) / 1080), 20px);
+  padding: 24px;
   border-bottom: 1px solid currentColor;
   text-align: center;
   font-family: var(--main-font);
@@ -179,8 +183,8 @@ button {
 
 .content__blockquote {
   width: 86%;
-  margin-bottom: 1.5em;
-  padding-left: 198px;
+  margin-bottom: 1.6em;
+  padding-inline-start: clamp(20px, 14vw, 196px);
   font-family: var(--main-font);
   font-style: italic;
   line-height: 2;
@@ -214,7 +218,7 @@ button {
 }
 
 .content__card-title {
-  font-size: clamp(30px, 4.1667vw, 60px);
+  font-size: 60px;
 }
 
 .colored-text {
@@ -237,13 +241,13 @@ button {
 }
 
 .content__card-subtitle {
-  font-size: clamp(16px, 1.25vw, 18px);
+  font-size: 18px;
   font-family: var(--main-font);
 }
 
 .content__list {
   list-style: none;
-  padding-inline-start: 2.222em;
+  padding-inline-start: 2.1em;
   margin: -0.1667em 0 0 1.9444em;
   font-family: var(--main-font);
 }
@@ -275,7 +279,7 @@ button {
   justify-content: center;
   align-items: center;
   border-top: 1px solid currentColor;
-  margin-top: 8.2%;
+  margin-top: 8.7%;
   padding: 2.4%;
   letter-spacing: 0.1em;
 }
@@ -309,4 +313,34 @@ button {
 
 .theme_dark .content__list li::before {
   background-image: url(../images/marker-dark.svg);
+}
+
+@media (max-width: 360px) {
+  .content__title {
+    margin-top: 8.1vw;
+    margin-bottom: 3.222vw;
+  }
+
+  .content__paragraph {
+    max-width: 333px;
+    padding: 0.25em 0 0 0.5em;
+    line-height: 116%;
+  }
+
+  .content__blockquote {
+    margin-bottom: 1.3em;
+    padding-inline-start: clamp(20px, 14vw, 150px);
+  }
+
+  .content__list {
+    padding-inline-start: 0.7em;
+  }
+
+  .footer {
+    margin-top: 5.2%;
+  }
+
+  .content__picture-caption {
+    padding: clamp(19.5px, calc(19.5px + 0.5 * ((100vw - 360px) / 1080)), 20px);
+  }
 }
